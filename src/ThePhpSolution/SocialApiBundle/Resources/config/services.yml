@@ -1,0 +1,14 @@
+parameters:
+    social_api.twitter.config.consumer_key:         C46W26kI9PzPcAFAaGzEK7qSW
+    social_api.twitter.config.consumer_secret:      UQ8tzQCfWWx3YyOTMQ8Ix1hp4ACMLTJqbbqpsNP2eUj8NvF8yY
+    social_api.twitter.config.access_token:         3460639454-2vURCxi5kQtqjFHuOzv6TWfiGFKHYDBUrdnNtjr
+    social_api.twitter.config.access_token_secret:  ST0dbdbZHG5u9Xe2bThPEAzxKau9vgzhoKFw8RLSLOoRj
+
+services:
+    social_api.twitter.config:
+        class: ThePhpSolution\SocialApiBundle\Integration\ThirdParties\Twitter\TwitterConfig
+        arguments:
+            - "%social_api.twitter.config.consumer_key%"
+            - "%social_api.twitter.config.consumer_secret%"
+            - "%social_api.twitter.config.access_token%"
+            - "%social_api.twitter.config.access_token_secret%"
